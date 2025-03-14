@@ -1,0 +1,310 @@
+@import '~bootstrap/scss/bootstrap';
+@import './styles/variables';
+
+
+// Feature section
+.feature-section {
+  padding: 4rem 0;
+  
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba($purple-light, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: $purple-light;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+  }
+  
+  &:hover .feature-icon {
+    transform: scale(1.1);
+    background: rgba($purple-light, 0.15);
+  }
+}
+
+// Stats section
+.stats-section {
+  background: $body-bg;
+  padding: 4rem 0;
+  border-top: 1px solid rgba($primary, 0.2);
+  border-bottom: 1px solid rgba($primary, 0.2);
+  
+  .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $purple-light;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      color: $text-secondary;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Section titles
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h2 {
+    color: $light;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  
+  p {
+    color: $text-secondary;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Footer
+.footer {
+  background: $nav-dark;
+  padding: 4rem 0;
+  border-top: 1px solid rgba($primary, 0.2);
+  
+  h5 {
+    color: $light;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  p, a {
+    color: $text-secondary;
+  }
+  
+  a:hover {
+    color: $purple-light;
+    text-decoration: none;
+  }
+}
+
+// Team styles
+.team-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  .member-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid $primary;
+      background: $card-bg;
+      box-shadow: 0 0 20px rgba($primary, 0.3);
+    }
+
+    .member-icon {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+      background: $gradient-primary;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $light;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+    color: $text-primary !important;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// Feature cards
+.feature-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+
+    .feature-icon {
+      transform: scale(1.1);
+    }
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba($primary, 0.1), rgba($purple-dark, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  h4 {
+    color: $text-primary !important;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// Vision card
+.vision-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    font-weight: 600;
+    color: $text-primary !important;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+// Stats Card
+.stats-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($primary, 0.3);
+  }
+
+  h3 {
+    color: $primary;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Roadmap Card
+.roadmap-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($primary, 0.3);
+  }
+
+  .text-gradient {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: $text-primary;
+    margin-bottom: 1rem;
+  }
+
+  ul li {
+    color: $text-secondary;
+    font-size: 0.9rem;
+  }
+}
+
+// Team Card
+.team-card {
+  background: $gradient-card;
+  border: 1px solid $card-border-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($primary, 0.3);
+  }
+
+  .member-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid $primary;
+    }
+
+    .member-icon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      background: $primary;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $light;
+    }
+  }
+}
+
+// Responsive text
+@include media-breakpoint-down(md) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1.125rem;
+  }
+  
+  .stat-item .stat-value {
+    font-size: 2rem;
+  }
+}

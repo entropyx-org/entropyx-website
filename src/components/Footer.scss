@@ -1,0 +1,156 @@
+@import '../styles/variables';
+
+.footer {
+  background: $nav-dark;
+  padding: 4rem 0 2rem;
+  color: $light;
+  border-top: 1px solid rgba($purple-light, 0.2);
+
+  .footer-main {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba($purple-light, 0.2);
+  }
+
+  h5 {
+    color: $purple-light;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: rgba($light, 0.8);
+    line-height: 1.6;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    a {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($purple-light, 0.1);
+      border-radius: 50%;
+      color: $purple-light;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $purple-light;
+        color: $light;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 2rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      break-inside: avoid;
+
+      a {
+        color: rgba($light, 0.8);
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: $purple-light;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .newsletter-form {
+    .input-group {
+      background: rgba($light, 0.1);
+      border-radius: $btn-border-radius;
+      padding: 0.25rem;
+    }
+
+    .form-control {
+      background: transparent;
+      border: none;
+      color: $light;
+      padding: 0.5rem 1rem;
+
+      &::placeholder {
+        color: rgba($light, 0.5);
+      }
+
+      &:focus {
+        box-shadow: none;
+        background: rgba($light, 0.05);
+      }
+    }
+
+    .btn {
+      padding: 0.5rem 1.5rem;
+      background: $purple-light;
+      border: none;
+      font-weight: 500;
+
+      &:hover {
+        background: lighten($purple-light, 5%);
+      }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: rgba($light, 0.7);
+    }
+
+    .version {
+      color: $purple-light;
+      font-weight: 500;
+    }
+
+    .separator {
+      margin: 0 0.75rem;
+      color: rgba($light, 0.3);
+    }
+
+    a {
+      color: rgba($light, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $purple-light;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+
+    .quick-links {
+      columns: 1;
+      margin-bottom: 2rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

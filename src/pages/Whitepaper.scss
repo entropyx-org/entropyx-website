@@ -1,0 +1,195 @@
+@import '../styles/variables';
+
+.whitepaper-page {
+  .whitepaper-nav-wrapper {
+    position: sticky;
+    top: 2rem;
+    background: $card-bg;
+    border-radius: $card-border-radius;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .whitepaper-nav {
+    .nav-link {
+      color: $text-secondary;
+      padding: 0.75rem 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        background-color: rgba($primary, 0.1);
+        color: $primary;
+      }
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: $primary;
+      }
+    }
+  }
+
+  .whitepaper-content {
+    .content-section {
+      border-radius: $card-border-radius;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba($dark, 0.05);
+      transition: transform 0.3s ease;
+
+      h2 {
+        color: $primary;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        svg {
+          color: $primary;
+          margin-right: 0.75rem;
+        }
+      }
+
+      h3 {
+        color: $text-primary;
+        font-size: 1.35rem;
+        margin: 1.5rem 0 1rem;
+        text-align: center;
+      }
+
+      h4 {
+        color: $text-primary;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      p {
+        color: $text-secondary;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+        text-align: left;
+        text-indent: 2em;
+      }
+
+      .lead {
+        text-indent: 0;
+      }
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .feature-card {
+        background: rgba($light, 0.5);
+        border: 1px solid $card-border-color;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        h4 {
+          color: $text-primary;
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: $text-secondary;
+          font-size: 0.9rem;
+          margin: 0;
+        }
+      }
+    }
+
+    .stats-card {
+      background: rgba($light, 0.5);
+      margin: 1.5rem 0;
+
+      .table {
+        margin-bottom: 0;
+
+        th {
+          background: rgba($primary, 0.1);
+          color: $primary;
+          font-weight: 600;
+          border-bottom: none;
+          text-align: center;
+        }
+
+        td {
+          text-align: center;
+          color: $text-secondary;
+          border-color: rgba($primary, 0.1);
+
+          &:first-child {
+            color: $text-primary;
+            font-weight: 500;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .tokenomics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-card {
+      background: rgba($light, 0.5);
+      border: 1px solid $card-border-color;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid rgba($primary, 0.1);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .label {
+            color: $text-secondary;
+            font-weight: 500;
+          }
+
+          .value {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+  .whitepaper-page {
+    .content-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-grid,
+    .tokenomics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

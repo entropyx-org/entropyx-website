@@ -71,37 +71,14 @@
     }
   }
 
-  .newsletter-form {
-    .input-group {
-      background: rgba($light, 0.1);
-      border-radius: $btn-border-radius;
-      padding: 0.25rem;
-    }
-
-    .form-control {
-      background: transparent;
-      border: none;
-      color: $light;
-      padding: 0.5rem 1rem;
-
-      &::placeholder {
-        color: rgba($light, 0.5);
-      }
-
-      &:focus {
-        box-shadow: none;
-        background: rgba($light, 0.05);
-      }
-    }
-
-    .btn {
-      padding: 0.5rem 1.5rem;
-      background: $purple-light;
-      border: none;
-      font-weight: 500;
+  .contact-email {
+    a {
+      color: rgba($light, 1);
+      text-decoration: none;
+      transition: all 0.2s ease;
 
       &:hover {
-        background: lighten($purple-light, 5%);
+        color: $purple-light;
       }
     }
   }

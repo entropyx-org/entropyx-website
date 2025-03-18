@@ -21,6 +21,7 @@ import {
 import { TeamMembers } from '../components/Team';
 import { getTotalBurnedAmount } from '../services/api';
 import { formatENXAmount } from '../utils/format';
+import CrowdfundingSplash from '../components/CrowdfundingSplash';
 
 const Home = () => {
   const [totalBurned, setTotalBurned] = useState('********');
@@ -163,6 +164,11 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      {/* CrowdfundingSplash Section */}
+      <section>
+        <CrowdfundingSplash />
       </section>
 
       {/* Features Section */}

@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faWallet, faCompass } from '@fortawesome/free-solid-svg-icons';
+import { faWallet, faCompass, faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
@@ -62,6 +62,12 @@ const Navigation = () => {
             </LinkContainer>
             <LinkContainer to="/about">
               <Nav.Link>About Us</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/crowdfunding">
+              <Nav.Link>
+                <FontAwesomeIcon icon={faHandHoldingDollar} className="me-1" />
+                Crowdfunding
+              </Nav.Link>
             </LinkContainer>
           </Nav>
           <Nav>

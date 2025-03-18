@@ -1,0 +1,135 @@
+@import '../styles/variables';
+
+.crowdfunding-page {
+  
+  .hero-section {
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%);
+  }
+
+  .stats-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .stats-icon {
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+
+    .total-amount {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $primary-color;
+      margin: 1rem 0;
+    }
+
+    .target-amount {
+      color: $text-muted;
+      margin-bottom: 1rem;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 5px;
+      background-color: rgba($primary-color, 0.1);
+
+      .progress-bar {
+        background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%);
+        border-radius: 5px;
+      }
+    }
+  }
+  
+  .crypto-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    
+    .nav-link {
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &.active {
+        background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%);
+      }
+
+      &:not(.active):hover {
+        background: rgba($primary-color, 0.1);
+      }
+    }
+  }
+
+  .wallet-address-container {
+    background-color: rgba($primary-color, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+    code {
+      word-break: break-all;
+      color: $primary-color;
+    }
+
+    .copy-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: transform 0.2s;
+      color: $text-muted;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $primary-color;
+      }
+
+      svg {
+        font-size: 1.2rem;
+      }
+
+      .text-success {
+        color: $secondary-color !important;
+      }
+    }
+  }
+
+  .transaction-hash {
+    font-size: 0.9rem;
+    color: $primary-color;
+  }
+
+  .table {
+    th {
+      background-color: rgba($primary-color, 0.05);
+      border-bottom: 2px solid rgba($primary-color, 0.1);
+      color: $text-muted;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .crypto-nav {
+      .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    .table {
+      font-size: 0.9rem;
+    }
+
+    .total-amount {
+      font-size: 2rem !important;
+    }
+  }
+}

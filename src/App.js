@@ -7,6 +7,7 @@ import Roadmap from './pages/Roadmap';
 import Whitepaper from './pages/Whitepaper';
 import About from './pages/About';
 import Burns from './pages/Burns';
+import Crowdfunding from './pages/Crowdfunding';
 import ScrollToTop from './components/ScrollToTop';
 
 // Import styles
@@ -25,6 +26,7 @@ function App() {
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/about" element={<About />} />
             <Route path="/whitepaper" element={<Whitepaper />} />
+            <Route path="/crowdfunding" element={<Crowdfunding />} />
           </Routes>
         </main>
         <Footer />

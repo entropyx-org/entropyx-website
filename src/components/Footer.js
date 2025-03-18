@@ -13,7 +13,7 @@ import './Footer.scss';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const version = 'v1.0.0'; // You can update this version number as needed
+  const version = 'v1.15.2'; // You can update this version number as needed
 
   const socialLinks = [
     {
@@ -24,7 +24,7 @@ const Footer = () => {
     {
       name: 'Discord',
       icon: faDiscord,
-      url: 'https://discord.gg/entropyx'
+      url: 'https://discord.gg/Ddje2EtxwY'
     },
     {
       name: 'Telegram',
@@ -87,21 +87,16 @@ const Footer = () => {
             </ul>
           </Col>
           <Col lg={4} md={12}>
-            <h5>Newsletter</h5>
-            <p>Subscribe to our newsletter for the latest updates and announcements.</p>
-            <form className="newsletter-form">
-              <div className="input-group">
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter your email"
-                  aria-label="Enter your email"
-                />
-                <button className="btn btn-primary" type="submit">
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            <h5>Contact Us</h5>
+            <p>Have questions or feedback? Feel free to reach out to us via email.</p>
+            <div className="contact-email">
+              <a
+                href="mailto:entropyx.official@gmail.com"
+                className="email-link"
+              >
+                entropyx.official@gmail.com
+              </a>
+            </div>
           </Col>
         </Row>
         <Row className="footer-bottom">
@@ -114,9 +109,9 @@ const Footer = () => {
             <p className="mb-0">
               <span className="version">{version}</span>
               <span className="separator">|</span>
-              <a href="/terms">Terms</a>
+              <a href="#terms">Terms</a>
               <span className="separator">|</span>
-              <a href="/privacy">Privacy</a>
+              <a href="#privacy">Privacy</a>
             </p>
           </Col>
         </Row>

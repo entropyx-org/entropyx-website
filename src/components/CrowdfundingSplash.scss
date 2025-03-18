@@ -1,0 +1,163 @@
+@import '../styles/variables';
+
+.crowdfunding-splash {
+  .modal-content {
+    background: none;
+    border: none;
+  }
+
+  .splash-content {
+    background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 15%) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .splash-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .splash-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin: 0;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .splash-body {
+    text-align: center;
+
+    .highlight-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .chart-icon {
+        font-size: 2.5rem;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .target {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .amount {
+          font-size: 2.5rem;
+          font-weight: 700;
+          line-height: 1;
+          color: #ffffff;
+        }
+
+        .label {
+          font-size: 1rem;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      background: $secondary-color;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+      display: inline-block;
+      margin-bottom: 1rem;
+
+      &:hover {
+        transform: translateY(-2px);
+        background: lighten($secondary-color, 5%);
+      }
+    }
+  }
+
+  .splash-footer {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .crowdfunding-splash {
+    .splash-header {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .splash-body {
+      .highlight-box {
+        padding: 1rem;
+        
+        .target .amount {
+          font-size: 2rem;
+        }
+      }
+
+      .description {
+        font-size: 1rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+      }
+    }
+  }
+}
